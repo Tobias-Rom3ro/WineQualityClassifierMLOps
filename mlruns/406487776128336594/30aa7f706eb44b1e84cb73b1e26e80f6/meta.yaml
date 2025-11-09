@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/406487776128336594/30aa7f706eb44b1e84cb73b1e26e80f6/artifacts
+end_time: 1762558585625
+entry_point_name: ''
+experiment_id: '406487776128336594'
+lifecycle_stage: active
+run_id: 30aa7f706eb44b1e84cb73b1e26e80f6
+run_name: deep_trees_RF
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762558578501
+status: 3
+tags: []
+user_id: Usuario

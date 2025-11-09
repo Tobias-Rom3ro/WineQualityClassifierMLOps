@@ -1,0 +1,7 @@
+
+Experimento para clasificación binaria de calidad de vino blanco.
+Objetivo: Predecir si un vino es de alta calidad (≥6) o baja calidad (<6)
+basándose en sus propiedades fisicoquímicas.
+
+Dataset: Wine Quality Dataset (Kaggle)
+Modelo: Random Forest Classifier

@@ -1,0 +1,23 @@
+
+# BALANCED_MEDIUM - Random Forest Classifier
+
+## Descripción del Experimento
+Configuración balanceada con regularización moderada
+
+## Configuración del Modelo
+- **Algoritmo:** Random Forest Classifier
+- **N° de árboles:** 100
+- **Profundidad máxima:** 10
+- **Min samples split:** 5
+- **Random state:** 42
+
+## Dataset
+- **Nombre:** Wine Quality
+- **Total de muestras:** 4898
+- **Features:** 11
+- **Target:** Clasificación binaria (Alta/Baja calidad)
+- **Training samples:** 3918 (80%)
+- **Test samples:** 980 (20%)
+
+---
+**Ejecutado:** 2025-11-07 18:15:57

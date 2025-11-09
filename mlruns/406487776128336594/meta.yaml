@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/406487776128336594
+creation_time: 1762558541038
+experiment_id: '406487776128336594'
+last_update_time: 1762558541038
+lifecycle_stage: active
+name: wine-quality-classifier

@@ -1,0 +1,19 @@
+creation_timestamp: 1762558593807
+current_stage: Production
+deployment_job_state: null
+description: "\n    ## Versión 1 - large_forest\n\n    ### Configuración\n    - **n_estimators:**
+  200\n    - **max_depth:** 15\n    - **min_samples_split:** 5\n\n    ### Métricas\n
+  \   - **Accuracy:** 0.8378\n    - **F1-Score:** 0.8804\n    - **Precision:** 0.8641\n
+  \   - **Recall:** 0.8972\n    - **ROC-AUC:** 0.8965\n\n    ### Información\n    -
+  **Run ID:** f8dca8c791f646d68ba8cf142d6b57fe\n    "
+last_updated_timestamp: 1762558618994
+model_id: m-758c7871bb534951bf29dca7af0f2ce3
+name: wine-quality-classifier
+run_id: f8dca8c791f646d68ba8cf142d6b57fe
+run_link: ''
+source: models:/m-758c7871bb534951bf29dca7af0f2ce3
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/406487776128336594/models/m-758c7871bb534951bf29dca7af0f2ce3/artifacts
+user_id: null
+version: 1

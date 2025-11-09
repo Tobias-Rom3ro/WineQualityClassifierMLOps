@@ -1,0 +1,10 @@
+artifact_location: file:C:/Users/Usuario/PycharmProjects/WineQualityClassifierMLOps/notebook/mlruns/680743280324005862/models/m-25b09c40c73d4b2fa0c5f6a4dcf408c0/artifacts
+creation_timestamp: 1762557358955
+experiment_id: '680743280324005862'
+last_updated_timestamp: 1762557363443
+model_id: m-25b09c40c73d4b2fa0c5f6a4dcf408c0
+model_type: null
+name: model
+source_run_id: 4f192c4c5ff04790a0da46e7e5e0e651
+status: 2
+status_message: null

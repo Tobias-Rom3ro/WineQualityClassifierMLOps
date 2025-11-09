@@ -1,0 +1,15 @@
+aliases: {}
+creation_timestamp: 1762557428269
+deployment_job_id: null
+deployment_job_state: null
+description: "\n    Modelo de clasificación binaria para predecir la calidad de vino
+  blanco basándose en\n    propiedades fisicoquímicas. Clasifica vinos como **Alta
+  Calidad (≥6)** o **Baja Calidad (<6)**.\n\n    Mejor Configuración Encontrada:\n
+  \   - **Algoritmo:** Random Forest Classifier\n    - **Configuración:** large_forest\n
+  \   - **N° de árboles:** 200\n    - **Profundidad máxima:** 15\n    - **Min samples
+  split:** 5\n    - **Random state:** 42\n\n    ## Performance en Test Set\n    |
+  Métrica | Valor |\n    |---------|-------|\n    | Accuracy | 0.8378 |\n    | F1-Score
+  | 0.8804 |\n    | Precision | 0.8641 |\n    | Recall | 0.8972 |\n    | ROC-AUC |
+  0.8965 |\n    ---\n    "
+last_updated_timestamp: 1762557453121
+name: wine-quality-classifier

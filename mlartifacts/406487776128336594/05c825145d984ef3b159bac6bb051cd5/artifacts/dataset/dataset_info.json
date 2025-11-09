@@ -1,0 +1,26 @@
+{
+  "total_samples": 4898,
+  "n_features": 11,
+  "feature_names": [
+    "fixed acidity",
+    "volatile acidity",
+    "citric acid",
+    "residual sugar",
+    "chlorides",
+    "free sulfur dioxide",
+    "total sulfur dioxide",
+    "density",
+    "pH",
+    "sulphates",
+    "alcohol"
+  ],
+  "train_samples": 3918,
+  "test_samples": 980,
+  "test_size": 0.2,
+  "random_state": 42,
+  "threshold": 6,
+  "class_distribution": {
+    "0": 1640,
+    "1": 3258
+  }
+}

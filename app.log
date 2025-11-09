@@ -1,0 +1,380 @@
+2025-11-08 19:55:29,422 - __main__ - ERROR - Full traceback:
+Traceback (most recent call last):
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\app.py", line 132, in main
+    validate_environment()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\app.py", line 44, in validate_environment
+    genai_config = get_genai_config()
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\src\config\settings.py", line 74, in get_genai_config
+    _genai_config = GenAIConfig.from_env()
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\src\config\settings.py", line 39, in from_env
+    temperature=float(os.getenv("GENAI_TEMPERATURE")),
+                ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+2025-11-08 20:08:08,032 - __main__ - INFO - ======================================================================
+2025-11-08 20:08:08,034 - __main__ - INFO - ======================================================================
+2025-11-08 20:08:08,034 - __main__ - INFO -    Tracking URI: http://127.0.0.1:5000
+2025-11-08 20:08:08,034 - __main__ - INFO -    Model Name: wine-quality-classifier
+2025-11-08 20:08:08,034 - __main__ - INFO -    Stage: Production
+2025-11-08 20:08:08,034 - src.core.mlflow_client - INFO - MLflow Client initialized: http://127.0.0.1:5000
+2025-11-08 20:08:08,035 - __main__ - INFO -    Provider: gemini
+2025-11-08 20:08:08,035 - __main__ - INFO -    Model: gemini-2.5-flash
+2025-11-08 20:08:08,037 - __main__ - ERROR - Full traceback:
+Traceback (most recent call last):
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\src\core\genai_client.py", line 34, in __init__
+    import google.generativeai as genai
+ModuleNotFoundError: No module named 'google.generativeai'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\app.py", line 137, in main
+    prediction_service, interpretation_service = initialize_services()
+                                                 ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\app.py", line 91, in initialize_services
+    genai_client = GenAIClient()
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\src\core\genai_client.py", line 206, in __init__
+    self.provider = self._initialize_provider()
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\src\core\genai_client.py", line 249, in _initialize_provider
+    return provider_class(
+        api_key=self.api_key,
+        model_name=self.model_name,
+        **self.config
+    )
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\src\core\genai_client.py", line 49, in __init__
+    raise ImportError(
+    ...<2 lines>...
+    )
+ImportError: google-generativeai not installed. Install it with: pip install google-generativeai
+2025-11-08 20:10:35,598 - __main__ - INFO - ======================================================================
+2025-11-08 20:10:35,599 - __main__ - INFO - ======================================================================
+2025-11-08 20:10:35,600 - __main__ - INFO -    Tracking URI: http://127.0.0.1:5000
+2025-11-08 20:10:35,600 - __main__ - INFO -    Model Name: wine-quality-classifier
+2025-11-08 20:10:35,600 - __main__ - INFO -    Stage: Production
+2025-11-08 20:10:35,601 - src.core.mlflow_client - INFO - MLflow Client initialized: http://127.0.0.1:5000
+2025-11-08 20:10:35,601 - __main__ - INFO -    Provider: gemini
+2025-11-08 20:10:35,601 - __main__ - INFO -    Model: gemini-2.5-flash
+2025-11-08 20:10:43,047 - src.core.genai_client - INFO - GenAI Client initialized with provider: gemini
+2025-11-08 20:10:43,048 - __main__ - INFO -    Testing GenAI connection...
+2025-11-08 20:10:44,506 - src.core.mlflow_client - INFO - Loading model: models:/wine-quality-classifier/Production
+2025-11-08 20:11:09,338 - src.core.mlflow_client - INFO -  Model cargado satisfactoriamente: wine-quality-classifier
+2025-11-08 20:11:09,667 - __main__ - INFO -    Model loaded: wine-quality-classifier
+2025-11-08 20:11:09,667 - __main__ - INFO -    Version: 1
+2025-11-08 20:11:09,667 - __main__ - INFO -    Stage: Production
+2025-11-08 20:11:09,671 - __main__ - INFO - ======================================================================
+2025-11-08 20:11:09,674 - __main__ - INFO -    Server: 0.0.0.0:7860
+2025-11-08 20:11:09,674 - __main__ - INFO -    Debug mode: False
+2025-11-08 20:11:10,859 - __main__ - ERROR - Full traceback:
+Traceback (most recent call last):
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\app.py", line 157, in main
+    app.launch(
+    ~~~~~~~~~~^
+        server_name=app_config.server_host,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        debug=app_config.debug
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\src\ui\gradio_app.py", line 475, in launch
+    interface = self.create_interface()
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\src\ui\gradio_app.py", line 350, in create_interface
+    dataframe_output = gr.Dataframe(label="Resultados Detallados",dataframe_output = gr.Dataframe(
+        label="Resultados Detallados",
+        wrap=True,
+        interactive=False
+    ))
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\.venv\Lib\site-packages\gradio\component_meta.py", line 189, in wrapper
+    return fn(self, **kwargs)
+TypeError: Dataframe.__init__() got an unexpected keyword argument 'dataframe_output'
+2025-11-08 20:11:10,952 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-initiated-analytics "HTTP/1.1 200 OK"
+2025-11-08 20:11:11,465 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-11-08 20:17:28,606 - __main__ - INFO - ======================================================================
+2025-11-08 20:17:28,607 - __main__ - INFO - ======================================================================
+2025-11-08 20:17:28,607 - __main__ - INFO -    Tracking URI: http://127.0.0.1:5000
+2025-11-08 20:17:28,607 - __main__ - INFO -    Model Name: wine-quality-classifier
+2025-11-08 20:17:28,607 - __main__ - INFO -    Stage: Production
+2025-11-08 20:17:28,608 - src.core.mlflow_client - INFO - MLflow Client initialized: http://127.0.0.1:5000
+2025-11-08 20:17:28,608 - __main__ - INFO -    Provider: gemini
+2025-11-08 20:17:28,608 - __main__ - INFO -    Model: gemini-2.5-flash
+2025-11-08 20:17:31,599 - src.core.genai_client - INFO - GenAI Client initialized with provider: gemini
+2025-11-08 20:17:31,599 - __main__ - INFO -    Testing GenAI connection...
+2025-11-08 20:17:32,890 - src.core.mlflow_client - INFO - Loading model: models:/wine-quality-classifier/Production
+2025-11-08 20:17:41,795 - src.core.mlflow_client - INFO -  Model cargado satisfactoriamente: wine-quality-classifier
+2025-11-08 20:17:41,842 - __main__ - INFO -    Model loaded: wine-quality-classifier
+2025-11-08 20:17:41,842 - __main__ - INFO -    Version: 1
+2025-11-08 20:17:41,842 - __main__ - INFO -    Stage: Production
+2025-11-08 20:17:41,845 - __main__ - INFO - ======================================================================
+2025-11-08 20:17:41,847 - __main__ - INFO -    Server: 0.0.0.0:7860
+2025-11-08 20:17:41,847 - __main__ - INFO -    Debug mode: False
+2025-11-08 20:17:42,752 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-initiated-analytics "HTTP/1.1 200 OK"
+2025-11-08 20:17:43,081 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-11-08 20:17:44,984 - httpx - INFO - HTTP Request: GET http://localhost:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-11-08 20:17:47,260 - httpx - INFO - HTTP Request: HEAD http://localhost:7860/ "HTTP/1.1 200 OK"
+2025-11-08 20:17:47,397 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-launched-telemetry "HTTP/1.1 200 OK"
+2025-11-08 20:21:13,388 - __main__ - INFO -  Validating environment...
+2025-11-08 20:21:13,388 - __main__ - INFO - Environment validation passed
+2025-11-08 20:21:13,389 - __main__ - INFO - ======================================================================
+2025-11-08 20:21:13,389 - __main__ - INFO - WINE QUALITY PREDICTOR - Initializing Services
+2025-11-08 20:21:13,389 - __main__ - INFO - ======================================================================
+2025-11-08 20:21:13,389 - __main__ - INFO - 
+ Step 1: Initializing MLflow Client...
+2025-11-08 20:21:13,389 - __main__ - INFO -    Tracking URI: http://127.0.0.1:5000
+2025-11-08 20:21:13,389 - __main__ - INFO -    Model Name: wine-quality-classifier
+2025-11-08 20:21:13,389 - __main__ - INFO -    Stage: Production
+2025-11-08 20:21:13,389 - src.core.mlflow_client - INFO - MLflow Client initialized: http://127.0.0.1:5000
+2025-11-08 20:21:13,389 - __main__ - INFO - 
+ Step 2: Initializing GenAI Client...
+2025-11-08 20:21:13,389 - __main__ - INFO -    Provider: gemini
+2025-11-08 20:21:13,389 - __main__ - INFO -    Model: gemini-2.5-flash
+2025-11-08 20:21:16,384 - src.core.genai_client - INFO - Gemini provider initialized: gemini-2.5-flash
+2025-11-08 20:21:16,384 - src.core.genai_client - INFO - GenAI Client initialized with provider: gemini
+2025-11-08 20:21:16,384 - __main__ - INFO -    Testing GenAI connection...
+2025-11-08 20:21:17,586 - src.core.genai_client - INFO - Connection test successful: OK
+2025-11-08 20:21:17,586 - __main__ - INFO - GenAI connection successful
+2025-11-08 20:21:17,586 - __main__ - INFO - 
+ Step 3: Initializing Prediction Service...
+2025-11-08 20:21:17,586 - src.core.mlflow_client - INFO - Loading model: models:/wine-quality-classifier/Production
+2025-11-08 20:21:26,369 - src.core.mlflow_client - INFO -  Model cargado satisfactoriamente: wine-quality-classifier
+2025-11-08 20:21:26,392 - src.services.prediction_service - INFO - Prediction Service initialized
+2025-11-08 20:21:26,392 - __main__ - INFO -    Model loaded: wine-quality-classifier
+2025-11-08 20:21:26,392 - __main__ - INFO -    Version: 1
+2025-11-08 20:21:26,393 - __main__ - INFO -    Stage: Production
+2025-11-08 20:21:26,393 - __main__ - INFO - 
+ Step 4: Initializing Interpretation Service...
+2025-11-08 20:21:26,393 - src.services.interpretation_service - INFO - Interpretation Service initialized
+2025-11-08 20:21:26,393 - __main__ - INFO - 
+ All services initialized successfully
+2025-11-08 20:21:26,393 - __main__ - INFO - ======================================================================
+2025-11-08 20:21:26,393 - __main__ - INFO - 
+ Creating Gradio interface...
+2025-11-08 20:21:26,393 - src.ui.gradio_app - INFO - Gradio App initialized
+2025-11-08 20:21:26,393 - __main__ - INFO - 
+ Launching application...
+2025-11-08 20:21:26,393 - __main__ - INFO -    Server: 0.0.0.0:7860
+2025-11-08 20:21:26,393 - __main__ - INFO -    Debug mode: False
+2025-11-08 20:21:26,393 - src.ui.gradio_app - INFO - Launching Gradio interface...
+2025-11-08 20:21:26,393 - src.ui.gradio_app - INFO - Creating Gradio interface...
+2025-11-08 20:21:26,945 - src.ui.gradio_app - INFO - Gradio interface created
+2025-11-08 20:21:27,266 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-initiated-analytics "HTTP/1.1 200 OK"
+2025-11-08 20:21:27,785 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-11-08 20:21:29,467 - httpx - INFO - HTTP Request: GET http://localhost:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-11-08 20:21:31,518 - httpx - INFO - HTTP Request: HEAD http://localhost:7860/ "HTTP/1.1 200 OK"
+2025-11-08 20:21:31,647 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-launched-telemetry "HTTP/1.1 200 OK"
+2025-11-08 20:28:37,259 - src.core.genai_client - ERROR - Gemini generation failed: Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 2.
+2025-11-08 20:28:37,260 - src.core.genai_client - ERROR - Text generation failed: Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 2.
+2025-11-08 20:43:40,895 - __main__ - INFO -  Validating environment...
+2025-11-08 20:43:40,895 - __main__ - INFO - Environment validation passed
+2025-11-08 20:43:40,895 - __main__ - INFO - ======================================================================
+2025-11-08 20:43:40,895 - __main__ - INFO - WINE QUALITY PREDICTOR - Initializing Services
+2025-11-08 20:43:40,895 - __main__ - INFO - ======================================================================
+2025-11-08 20:43:40,895 - __main__ - INFO - 
+ Step 1: Initializing MLflow Client...
+2025-11-08 20:43:40,895 - __main__ - INFO -    Tracking URI: http://127.0.0.1:5000
+2025-11-08 20:43:40,895 - __main__ - INFO -    Model Name: wine-quality-classifier
+2025-11-08 20:43:40,895 - __main__ - INFO -    Stage: Production
+2025-11-08 20:43:40,896 - src.core.mlflow_client - INFO - MLflow Client initialized: http://127.0.0.1:5000
+2025-11-08 20:43:40,896 - __main__ - INFO - 
+ Step 2: Initializing GenAI Client...
+2025-11-08 20:43:40,896 - __main__ - INFO -    Provider: gemini
+2025-11-08 20:43:40,896 - __main__ - INFO -    Model: gemini-2.5-flash
+2025-11-08 20:43:46,872 - src.core.genai_client - INFO - Gemini provider initialized: gemini-2.5-flash
+2025-11-08 20:43:46,873 - src.core.genai_client - INFO - GenAI Client initialized with provider: gemini
+2025-11-08 20:43:46,873 - __main__ - INFO -    Testing GenAI connection...
+2025-11-08 20:43:47,882 - src.core.genai_client - INFO - Connection test successful: OK
+2025-11-08 20:43:47,882 - __main__ - INFO - GenAI connection successful
+2025-11-08 20:43:47,882 - __main__ - INFO - 
+ Step 3: Initializing Prediction Service...
+2025-11-08 20:43:47,882 - src.core.mlflow_client - INFO - Loading model: models:/wine-quality-classifier/Production
+2025-11-08 20:43:58,282 - src.core.mlflow_client - INFO -  Model cargado satisfactoriamente: wine-quality-classifier
+2025-11-08 20:43:58,315 - src.services.prediction_service - INFO - Prediction Service initialized
+2025-11-08 20:43:58,315 - __main__ - INFO -    Model loaded: wine-quality-classifier
+2025-11-08 20:43:58,315 - __main__ - INFO -    Version: 1
+2025-11-08 20:43:58,315 - __main__ - INFO -    Stage: Production
+2025-11-08 20:43:58,315 - __main__ - INFO - 
+ Step 4: Initializing Interpretation Service...
+2025-11-08 20:43:58,315 - src.services.interpretation_service - INFO - Interpretation Service initialized
+2025-11-08 20:43:58,315 - __main__ - INFO - 
+ All services initialized successfully
+2025-11-08 20:43:58,315 - __main__ - INFO - ======================================================================
+2025-11-08 20:43:58,315 - __main__ - INFO - 
+ Creating Gradio interface...
+2025-11-08 20:43:58,315 - src.ui.gradio_app - INFO - Gradio App initialized
+2025-11-08 20:43:58,315 - __main__ - INFO - 
+ Launching application...
+2025-11-08 20:43:58,315 - __main__ - INFO -    Server: 0.0.0.0:7860
+2025-11-08 20:43:58,316 - __main__ - INFO -    Debug mode: False
+2025-11-08 20:43:58,316 - src.ui.gradio_app - INFO - Launching Gradio interface...
+2025-11-08 20:43:58,316 - src.ui.gradio_app - INFO - Creating Gradio interface...
+2025-11-08 20:43:58,917 - src.ui.gradio_app - INFO - Gradio interface created
+2025-11-08 20:43:59,154 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-initiated-analytics "HTTP/1.1 200 OK"
+2025-11-08 20:43:59,819 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-11-08 20:44:01,481 - httpx - INFO - HTTP Request: GET http://localhost:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-11-08 20:44:03,549 - httpx - INFO - HTTP Request: HEAD http://localhost:7860/ "HTTP/1.1 200 OK"
+2025-11-08 20:44:03,711 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-launched-telemetry "HTTP/1.1 200 OK"
+2025-11-08 20:44:13,219 - src.ui.gradio_app - INFO - Processing single prediction from UI...
+2025-11-08 20:44:13,219 - src.services.prediction_service - INFO - Processing single prediction...
+2025-11-08 20:44:23,998 - src.core.genai_client - ERROR - Gemini generation failed: Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 2.
+2025-11-08 20:44:23,998 - src.core.genai_client - ERROR - Text generation failed: Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 2.
+2025-11-08 20:44:23,999 - src.ui.gradio_app - INFO - UI prediction completed
+2025-11-08 20:49:27,474 - __main__ - INFO -  Validating environment...
+2025-11-08 20:49:27,475 - __main__ - INFO - Environment validation passed
+2025-11-08 20:49:27,475 - __main__ - INFO - ======================================================================
+2025-11-08 20:49:27,475 - __main__ - INFO - WINE QUALITY PREDICTOR - Initializing Services
+2025-11-08 20:49:27,475 - __main__ - INFO - ======================================================================
+2025-11-08 20:49:27,475 - __main__ - INFO - 
+ Step 1: Initializing MLflow Client...
+2025-11-08 20:49:27,475 - __main__ - INFO -    Tracking URI: http://127.0.0.1:5000
+2025-11-08 20:49:27,475 - __main__ - INFO -    Model Name: wine-quality-classifier
+2025-11-08 20:49:27,475 - __main__ - INFO -    Stage: Production
+2025-11-08 20:49:27,475 - src.core.mlflow_client - INFO - MLflow Client initialized: http://127.0.0.1:5000
+2025-11-08 20:49:27,475 - __main__ - INFO - 
+ Step 2: Initializing GenAI Client...
+2025-11-08 20:49:27,475 - __main__ - INFO -    Provider: gemini
+2025-11-08 20:49:27,475 - __main__ - INFO -    Model: gemini-2.5-flash
+2025-11-08 20:49:27,475 - __main__ - ERROR - 
+ Failed to start application: google-generativeai not installed. Install it with: pip install google-generativeai
+2025-11-08 20:49:27,476 - __main__ - ERROR - Full traceback:
+Traceback (most recent call last):
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\src\core\genai_client.py", line 34, in __init__
+    import google.genai as genai
+ModuleNotFoundError: No module named 'google.genai'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\app.py", line 137, in main
+    prediction_service, interpretation_service = initialize_services()
+                                                 ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\app.py", line 91, in initialize_services
+    genai_client = GenAIClient()
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\src\core\genai_client.py", line 206, in __init__
+    self.provider = self._initialize_provider()
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\src\core\genai_client.py", line 249, in _initialize_provider
+    return provider_class(
+        api_key=self.api_key,
+        model_name=self.model_name,
+        **self.config
+    )
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\src\core\genai_client.py", line 49, in __init__
+    raise ImportError(
+    ...<2 lines>...
+    )
+ImportError: google-generativeai not installed. Install it with: pip install google-generativeai
+2025-11-08 20:50:09,127 - __main__ - INFO -  Validating environment...
+2025-11-08 20:50:09,127 - __main__ - INFO - Environment validation passed
+2025-11-08 20:50:09,127 - __main__ - INFO - ======================================================================
+2025-11-08 20:50:09,127 - __main__ - INFO - WINE QUALITY PREDICTOR - Initializing Services
+2025-11-08 20:50:09,127 - __main__ - INFO - ======================================================================
+2025-11-08 20:50:09,127 - __main__ - INFO - 
+ Step 1: Initializing MLflow Client...
+2025-11-08 20:50:09,127 - __main__ - INFO -    Tracking URI: http://127.0.0.1:5000
+2025-11-08 20:50:09,127 - __main__ - INFO -    Model Name: wine-quality-classifier
+2025-11-08 20:50:09,128 - __main__ - INFO -    Stage: Production
+2025-11-08 20:50:09,128 - src.core.mlflow_client - INFO - MLflow Client initialized: http://127.0.0.1:5000
+2025-11-08 20:50:09,128 - __main__ - INFO - 
+ Step 2: Initializing GenAI Client...
+2025-11-08 20:50:09,128 - __main__ - INFO -    Provider: gemini
+2025-11-08 20:50:09,128 - __main__ - INFO -    Model: gemini-2.5-flash
+2025-11-08 20:50:10,393 - __main__ - ERROR - 
+ Failed to start application: Failed to initialize Gemini: module 'google.genai' has no attribute 'configure'
+2025-11-08 20:50:10,393 - __main__ - ERROR - Full traceback:
+Traceback (most recent call last):
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\src\core\genai_client.py", line 36, in __init__
+    genai.configure(api_key=api_key)
+    ^^^^^^^^^^^^^^^
+AttributeError: module 'google.genai' has no attribute 'configure'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\app.py", line 137, in main
+    prediction_service, interpretation_service = initialize_services()
+                                                 ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\app.py", line 91, in initialize_services
+    genai_client = GenAIClient()
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\src\core\genai_client.py", line 206, in __init__
+    self.provider = self._initialize_provider()
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\src\core\genai_client.py", line 249, in _initialize_provider
+    return provider_class(
+        api_key=self.api_key,
+        model_name=self.model_name,
+        **self.config
+    )
+  File "C:\Users\Usuario\PycharmProjects\WineQualityClassifierMLOps\src\core\genai_client.py", line 54, in __init__
+    raise Exception(f"Failed to initialize Gemini: {e}")
+Exception: Failed to initialize Gemini: module 'google.genai' has no attribute 'configure'
+2025-11-08 20:53:59,426 - __main__ - INFO -  Validating environment...
+2025-11-08 20:53:59,426 - __main__ - INFO - Environment validation passed
+2025-11-08 20:53:59,426 - __main__ - INFO - ======================================================================
+2025-11-08 20:53:59,426 - __main__ - INFO - WINE QUALITY PREDICTOR - Initializing Services
+2025-11-08 20:53:59,426 - __main__ - INFO - ======================================================================
+2025-11-08 20:53:59,426 - __main__ - INFO - 
+ Step 1: Initializing MLflow Client...
+2025-11-08 20:53:59,426 - __main__ - INFO -    Tracking URI: http://127.0.0.1:5000
+2025-11-08 20:53:59,427 - __main__ - INFO -    Model Name: wine-quality-classifier
+2025-11-08 20:53:59,427 - __main__ - INFO -    Stage: Production
+2025-11-08 20:53:59,427 - src.core.mlflow_client - INFO - MLflow Client initialized: http://127.0.0.1:5000
+2025-11-08 20:53:59,427 - __main__ - INFO - 
+ Step 2: Initializing GenAI Client...
+2025-11-08 20:53:59,427 - __main__ - INFO -    Provider: gemini
+2025-11-08 20:53:59,427 - __main__ - INFO -    Model: gemini-2.5-flash
+2025-11-08 20:54:02,665 - src.core.genai_client - INFO - Gemini provider initialized: gemini-2.5-flash
+2025-11-08 20:54:02,665 - src.core.genai_client - INFO - GenAI Client initialized with provider: gemini
+2025-11-08 20:54:02,666 - __main__ - INFO -    Testing GenAI connection...
+2025-11-08 20:54:04,078 - src.core.genai_client - INFO - Connection test successful: OK
+2025-11-08 20:54:04,078 - __main__ - INFO - GenAI connection successful
+2025-11-08 20:54:04,078 - __main__ - INFO - 
+ Step 3: Initializing Prediction Service...
+2025-11-08 20:54:04,078 - src.core.mlflow_client - INFO - Loading model: models:/wine-quality-classifier/Production
+2025-11-08 20:54:13,618 - src.core.mlflow_client - INFO -  Model cargado satisfactoriamente: wine-quality-classifier
+2025-11-08 20:54:13,648 - src.services.prediction_service - INFO - Prediction Service initialized
+2025-11-08 20:54:13,648 - __main__ - INFO -    Model loaded: wine-quality-classifier
+2025-11-08 20:54:13,648 - __main__ - INFO -    Version: 1
+2025-11-08 20:54:13,648 - __main__ - INFO -    Stage: Production
+2025-11-08 20:54:13,648 - __main__ - INFO - 
+ Step 4: Initializing Interpretation Service...
+2025-11-08 20:54:13,648 - src.services.interpretation_service - INFO - Interpretation Service initialized
+2025-11-08 20:54:13,648 - __main__ - INFO - 
+ All services initialized successfully
+2025-11-08 20:54:13,648 - __main__ - INFO - ======================================================================
+2025-11-08 20:54:13,648 - __main__ - INFO - 
+ Creating Gradio interface...
+2025-11-08 20:54:13,648 - src.ui.gradio_app - INFO - Gradio App initialized
+2025-11-08 20:54:13,648 - __main__ - INFO - 
+ Launching application...
+2025-11-08 20:54:13,648 - __main__ - INFO -    Server: 0.0.0.0:7860
+2025-11-08 20:54:13,648 - __main__ - INFO -    Debug mode: False
+2025-11-08 20:54:13,648 - src.ui.gradio_app - INFO - Launching Gradio interface...
+2025-11-08 20:54:13,648 - src.ui.gradio_app - INFO - Creating Gradio interface...
+2025-11-08 20:54:14,193 - src.ui.gradio_app - INFO - Gradio interface created
+2025-11-08 20:54:14,420 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-initiated-analytics "HTTP/1.1 200 OK"
+2025-11-08 20:54:14,880 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-11-08 20:54:16,711 - httpx - INFO - HTTP Request: GET http://localhost:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-11-08 20:54:18,766 - httpx - INFO - HTTP Request: HEAD http://localhost:7860/ "HTTP/1.1 200 OK"
+2025-11-08 20:54:18,892 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-launched-telemetry "HTTP/1.1 200 OK"
+2025-11-08 20:54:26,730 - src.ui.gradio_app - INFO - Processing single prediction from UI...
+2025-11-08 20:54:26,730 - src.services.prediction_service - INFO - Processing single prediction...
+2025-11-08 20:54:31,750 - src.services.prediction_service - INFO - Prediction completed: 1
+2025-11-08 20:54:31,750 - src.services.interpretation_service - INFO - Generating single prediction interpretation...
+2025-11-08 20:54:38,753 - src.services.interpretation_service - INFO - Interpretation generated
+2025-11-08 20:54:38,753 - src.ui.gradio_app - INFO - UI prediction completed
+2025-11-08 20:55:13,059 - src.ui.gradio_app - INFO - Processing batch from UI: C:\Users\Usuario\AppData\Local\Temp\gradio\25d76e261682f529941b1379cf43b712ae2227a46cc54f989cc2b0ca40991f4c\winequality.csv
+2025-11-08 20:55:18,240 - src.ui.gradio_app - INFO - UI batch completed
+2025-11-08 20:56:20,952 - src.ui.gradio_app - INFO - Processing single prediction from UI...
+2025-11-08 20:56:20,952 - src.services.prediction_service - INFO - Processing single prediction...
+2025-11-08 20:56:25,959 - src.services.prediction_service - INFO - Prediction completed: 1
+2025-11-08 20:56:25,959 - src.services.interpretation_service - INFO - Generating single prediction interpretation...
+2025-11-08 20:56:34,035 - src.services.interpretation_service - INFO - Interpretation generated
+2025-11-08 20:56:34,035 - src.ui.gradio_app - INFO - UI prediction completed
+2025-11-08 20:57:29,814 - src.ui.gradio_app - INFO - Processing single prediction from UI...
+2025-11-08 20:57:29,814 - src.services.prediction_service - INFO - Processing single prediction...
+2025-11-08 20:57:34,849 - src.services.prediction_service - INFO - Prediction completed: 1
+2025-11-08 20:57:34,850 - src.services.interpretation_service - INFO - Generating single prediction interpretation...
+2025-11-08 20:57:42,868 - src.services.interpretation_service - INFO - Interpretation generated
+2025-11-08 20:57:42,868 - src.ui.gradio_app - INFO - UI prediction completed
+2025-11-08 20:58:22,678 - src.ui.gradio_app - INFO - Processing batch from UI: C:\Users\Usuario\AppData\Local\Temp\gradio\25d76e261682f529941b1379cf43b712ae2227a46cc54f989cc2b0ca40991f4c\winequality.csv
+2025-11-08 20:58:28,904 - src.ui.gradio_app - INFO - UI batch completed

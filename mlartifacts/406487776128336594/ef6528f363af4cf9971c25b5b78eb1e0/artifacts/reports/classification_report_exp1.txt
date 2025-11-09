@@ -1,0 +1,11 @@
+Classification Report - baseline_small_RF
+==================================================
+
+              precision    recall  f1-score   support
+
+        Baja       0.75      0.66      0.70       328
+        Alta       0.84      0.89      0.86       652
+
+    accuracy                           0.81       980
+   macro avg       0.79      0.77      0.78       980
+weighted avg       0.81      0.81      0.81       980

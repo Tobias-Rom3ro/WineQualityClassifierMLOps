@@ -1,0 +1,11 @@
+Classification Report - large_forest_RF
+==================================================
+
+              precision    recall  f1-score   support
+
+        Baja       0.78      0.72      0.75       328
+        Alta       0.86      0.90      0.88       652
+
+    accuracy                           0.84       980
+   macro avg       0.82      0.81      0.81       980
+weighted avg       0.84      0.84      0.84       980

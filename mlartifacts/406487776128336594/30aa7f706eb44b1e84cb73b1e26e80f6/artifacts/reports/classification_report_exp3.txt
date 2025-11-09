@@ -1,0 +1,11 @@
+Classification Report - deep_trees_RF
+==================================================
+
+              precision    recall  f1-score   support
+
+        Baja       0.78      0.71      0.74       328
+        Alta       0.86      0.90      0.88       652
+
+    accuracy                           0.83       980
+   macro avg       0.82      0.80      0.81       980
+weighted avg       0.83      0.83      0.83       980

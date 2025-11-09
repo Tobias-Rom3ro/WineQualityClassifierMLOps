@@ -1,0 +1,23 @@
+
+# DEEP_TREES - Random Forest Classifier
+
+## Descripción del Experimento
+Árboles más profundos para capturar mayor complejidad
+
+## Configuración del Modelo
+- **Algoritmo:** Random Forest Classifier
+- **N° de árboles:** 100
+- **Profundidad máxima:** 15
+- **Min samples split:** 2
+- **Random state:** 42
+
+## Dataset
+- **Nombre:** Wine Quality
+- **Total de muestras:** 4898
+- **Features:** 11
+- **Target:** Clasificación binaria (Alta/Baja calidad)
+- **Training samples:** 3918 (80%)
+- **Test samples:** 980 (20%)
+
+---
+**Ejecutado:** 2025-11-07 18:36:18

@@ -1,0 +1,14 @@
+artifact_uri: file:C:/Users/Usuario/PycharmProjects/WineQualityClassifierMLOps/notebook/mlruns/680743280324005862/853e8a692c114581a51a2d5b1df4cc10/artifacts
+end_time: 1762557371247
+entry_point_name: ''
+experiment_id: '680743280324005862'
+lifecycle_stage: active
+run_id: 853e8a692c114581a51a2d5b1df4cc10
+run_name: deep_trees_RF
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762557363527
+status: 3
+tags: []
+user_id: Usuario

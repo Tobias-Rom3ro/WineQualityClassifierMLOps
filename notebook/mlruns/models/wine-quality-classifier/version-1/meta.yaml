@@ -1,0 +1,19 @@
+creation_timestamp: 1762557428401
+current_stage: Production
+deployment_job_state: null
+description: "\n    ## Versión 1 - large_forest\n\n    ### Configuración\n    - **n_estimators:**
+  200\n    - **max_depth:** 15\n    - **min_samples_split:** 5\n\n    ### Métricas\n
+  \   - **Accuracy:** 0.8378\n    - **F1-Score:** 0.8804\n    - **Precision:** 0.8641\n
+  \   - **Recall:** 0.8972\n    - **ROC-AUC:** 0.8965\n\n    ### Información\n    -
+  **Run ID:** e7cb5f2d22ba40579b38799f84a1b033\n    "
+last_updated_timestamp: 1762557452985
+model_id: m-5a5b3e24526b43c8b8a4712f394d2399
+name: wine-quality-classifier
+run_id: e7cb5f2d22ba40579b38799f84a1b033
+run_link: null
+source: models:/m-5a5b3e24526b43c8b8a4712f394d2399
+status: READY
+status_message: null
+storage_location: file:C:/Users/Usuario/PycharmProjects/WineQualityClassifierMLOps/notebook/mlruns/680743280324005862/models/m-5a5b3e24526b43c8b8a4712f394d2399/artifacts
+user_id: null
+version: 1

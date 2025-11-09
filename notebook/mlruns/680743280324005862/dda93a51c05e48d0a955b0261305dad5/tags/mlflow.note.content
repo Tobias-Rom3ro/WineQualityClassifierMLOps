@@ -1,0 +1,23 @@
+
+# BASELINE_SMALL - Random Forest Classifier
+
+## Descripción del Experimento
+Modelo baseline con pocos árboles para establecer línea base
+
+## Configuración del Modelo
+- **Algoritmo:** Random Forest Classifier
+- **N° de árboles:** 50
+- **Profundidad máxima:** 10
+- **Min samples split:** 2
+- **Random state:** 42
+
+## Dataset
+- **Nombre:** Wine Quality
+- **Total de muestras:** 4898
+- **Features:** 11
+- **Target:** Clasificación binaria (Alta/Baja calidad)
+- **Training samples:** 3918 (80%)
+- **Test samples:** 980 (20%)
+
+---
+**Ejecutado:** 2025-11-07 18:15:28
