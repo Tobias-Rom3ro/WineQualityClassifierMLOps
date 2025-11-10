@@ -80,7 +80,7 @@ class InterpretationService:
             return explanation
 
         except Exception as e:
-            logger.error(f"❌ Failed to generate interpretation: {e}")
+            logger.error(f"Failed to generate interpretation: {e}")
             return "No se pudo generar una explicación para esta predicción."
 
     def interpret_batch_predictions(self, summary: Dict) -> str:
@@ -118,7 +118,7 @@ class InterpretationService:
             return analysis
 
         except Exception as e:
-            logger.error(f"❌ Failed to generate batch interpretation: {e}")
+            logger.error(f"Failed to generate batch interpretation: {e}")
             return "No se pudo generar un análisis para este lote."
 
     def explain_feature_importance(
@@ -155,7 +155,7 @@ class InterpretationService:
             return explanation
 
         except Exception as e:
-            logger.error(f"❌ Failed to explain importance: {e}")
+            logger.error(f"Failed to explain importance: {e}")
             return "No se pudo generar explicación de importancia."
 
     def get_wine_profile(self, features: Dict[str, float]) -> str:
@@ -186,7 +186,7 @@ Usa lenguaje de cata profesional pero comprensible.
             return description
 
         except Exception as e:
-            logger.error(f"❌ Failed to generate wine profile: {e}")
+            logger.error(f"Failed to generate wine profile: {e}")
             return "No se pudo generar descripción del perfil."
 
     # ========================================================================

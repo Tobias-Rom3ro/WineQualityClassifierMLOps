@@ -378,3 +378,84 @@ Exception: Failed to initialize Gemini: module 'google.genai' has no attribute '
 2025-11-08 20:57:42,868 - src.ui.gradio_app - INFO - UI prediction completed
 2025-11-08 20:58:22,678 - src.ui.gradio_app - INFO - Processing batch from UI: C:\Users\Usuario\AppData\Local\Temp\gradio\25d76e261682f529941b1379cf43b712ae2227a46cc54f989cc2b0ca40991f4c\winequality.csv
 2025-11-08 20:58:28,904 - src.ui.gradio_app - INFO - UI batch completed
+2025-11-10 11:24:34,896 - __main__ - INFO -  Validating environment...
+2025-11-10 11:24:34,896 - __main__ - INFO - Environment validation passed
+2025-11-10 11:24:34,897 - __main__ - INFO - ======================================================================
+2025-11-10 11:24:34,897 - __main__ - INFO - WINE QUALITY PREDICTOR - Initializing Services
+2025-11-10 11:24:34,897 - __main__ - INFO - ======================================================================
+2025-11-10 11:24:34,897 - __main__ - INFO - 
+ Step 1: Initializing MLflow Client...
+2025-11-10 11:24:34,897 - __main__ - INFO -    Tracking URI: http://127.0.0.1:5000
+2025-11-10 11:24:34,897 - __main__ - INFO -    Model Name: wine-quality-classifier
+2025-11-10 11:24:34,897 - __main__ - INFO -    Stage: Production
+2025-11-10 11:24:34,897 - src.core.mlflow_client - INFO - MLflow Client initialized: http://127.0.0.1:5000
+2025-11-10 11:24:34,897 - __main__ - INFO - 
+ Step 2: Initializing GenAI Client...
+2025-11-10 11:24:34,897 - __main__ - INFO -    Provider: gemini
+2025-11-10 11:24:34,897 - __main__ - INFO -    Model: gemini-2.5-flash
+2025-11-10 11:24:41,640 - src.core.genai_client - INFO - Gemini provider initialized: gemini-2.5-flash
+2025-11-10 11:24:41,640 - src.core.genai_client - INFO - GenAI Client initialized with provider: gemini
+2025-11-10 11:24:41,640 - __main__ - INFO -    Testing GenAI connection...
+2025-11-10 11:24:43,313 - src.core.genai_client - INFO - Connection test successful: OK
+2025-11-10 11:24:43,313 - __main__ - INFO - GenAI connection successful
+2025-11-10 11:24:43,314 - __main__ - INFO - 
+ Step 3: Initializing Prediction Service...
+2025-11-10 11:24:43,314 - src.core.mlflow_client - INFO - Loading model: models:/wine-quality-classifier/Production
+2025-11-10 11:24:45,436 - urllib3.connectionpool - WARNING - Retrying (Retry(total=6, connect=6, read=7, redirect=7, status=7)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023CF62470E0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /api/2.0/mlflow/registered-models/get-latest-versions
+2025-11-10 11:24:51,800 - urllib3.connectionpool - WARNING - Retrying (Retry(total=5, connect=5, read=7, redirect=7, status=7)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023CF624A5D0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /api/2.0/mlflow/registered-models/get-latest-versions
+2025-11-10 11:25:01,933 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=4, read=7, redirect=7, status=7)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023CF624A710>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /api/2.0/mlflow/registered-models/get-latest-versions
+2025-11-10 11:26:07,121 - __main__ - INFO -  Validating environment...
+2025-11-10 11:26:07,121 - __main__ - INFO - Environment validation passed
+2025-11-10 11:26:07,122 - __main__ - INFO - ======================================================================
+2025-11-10 11:26:07,122 - __main__ - INFO - WINE QUALITY PREDICTOR - Initializing Services
+2025-11-10 11:26:07,122 - __main__ - INFO - ======================================================================
+2025-11-10 11:26:07,122 - __main__ - INFO - 
+ Step 1: Initializing MLflow Client...
+2025-11-10 11:26:07,122 - __main__ - INFO -    Tracking URI: http://127.0.0.1:5000
+2025-11-10 11:26:07,122 - __main__ - INFO -    Model Name: wine-quality-classifier
+2025-11-10 11:26:07,122 - __main__ - INFO -    Stage: Production
+2025-11-10 11:26:07,122 - src.core.mlflow_client - INFO - MLflow Client initialized: http://127.0.0.1:5000
+2025-11-10 11:26:07,122 - __main__ - INFO - 
+ Step 2: Initializing GenAI Client...
+2025-11-10 11:26:07,122 - __main__ - INFO -    Provider: gemini
+2025-11-10 11:26:07,122 - __main__ - INFO -    Model: gemini-2.5-flash
+2025-11-10 11:26:10,958 - src.core.genai_client - INFO - Gemini provider initialized: gemini-2.5-flash
+2025-11-10 11:26:10,958 - src.core.genai_client - INFO - GenAI Client initialized with provider: gemini
+2025-11-10 11:26:10,958 - __main__ - INFO -    Testing GenAI connection...
+2025-11-10 11:26:13,818 - src.core.genai_client - INFO - Connection test successful: OK
+2025-11-10 11:26:13,818 - __main__ - INFO - GenAI connection successful
+2025-11-10 11:26:13,818 - __main__ - INFO - 
+ Step 3: Initializing Prediction Service...
+2025-11-10 11:26:13,818 - src.core.mlflow_client - INFO - Loading model: models:/wine-quality-classifier/Production
+2025-11-10 11:26:28,130 - src.core.mlflow_client - INFO -  Model cargado satisfactoriamente: wine-quality-classifier
+2025-11-10 11:26:28,175 - src.services.prediction_service - INFO - Prediction Service initialized
+2025-11-10 11:26:28,176 - __main__ - INFO -    Model loaded: wine-quality-classifier
+2025-11-10 11:26:28,176 - __main__ - INFO -    Version: 1
+2025-11-10 11:26:28,176 - __main__ - INFO -    Stage: Production
+2025-11-10 11:26:28,176 - __main__ - INFO - 
+ Step 4: Initializing Interpretation Service...
+2025-11-10 11:26:28,176 - src.services.interpretation_service - INFO - Interpretation Service initialized
+2025-11-10 11:26:28,176 - __main__ - INFO - 
+ All services initialized successfully
+2025-11-10 11:26:28,176 - __main__ - INFO - ======================================================================
+2025-11-10 11:26:28,176 - __main__ - INFO - 
+ Creating Gradio interface...
+2025-11-10 11:26:28,176 - src.ui.gradio_app - INFO - Gradio App initialized
+2025-11-10 11:26:28,176 - __main__ - INFO - 
+ Launching application...
+2025-11-10 11:26:28,176 - __main__ - INFO -    Server: 0.0.0.0:7860
+2025-11-10 11:26:28,176 - __main__ - INFO -    Debug mode: False
+2025-11-10 11:26:28,176 - src.ui.gradio_app - INFO - Launching Gradio interface...
+2025-11-10 11:26:28,176 - src.ui.gradio_app - INFO - Creating Gradio interface...
+2025-11-10 11:26:29,026 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-initiated-analytics "HTTP/1.1 200 OK"
+2025-11-10 11:26:29,209 - src.ui.gradio_app - INFO - Gradio interface created
+2025-11-10 11:26:29,466 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-11-10 11:26:31,731 - httpx - INFO - HTTP Request: GET http://localhost:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-11-10 11:26:33,801 - httpx - INFO - HTTP Request: HEAD http://localhost:7860/ "HTTP/1.1 200 OK"
+2025-11-10 11:26:33,927 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-launched-telemetry "HTTP/1.1 200 OK"
+2025-11-10 11:26:52,011 - src.ui.gradio_app - INFO - Processing single prediction from UI...
+2025-11-10 11:26:52,011 - src.services.prediction_service - INFO - Processing single prediction...
+2025-11-10 11:26:57,274 - src.services.prediction_service - INFO - Prediction completed: 1
+2025-11-10 11:26:57,275 - src.services.interpretation_service - INFO - Generating single prediction interpretation...
+2025-11-10 11:27:07,747 - src.services.interpretation_service - INFO - Interpretation generated
+2025-11-10 11:27:07,748 - src.ui.gradio_app - INFO - UI prediction completed

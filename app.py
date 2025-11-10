@@ -127,7 +127,6 @@ def main():
         print("🍷 WINE QUALITY PREDICTOR - MLOps Project")
         print("=" * 70)
         print("Version: 1.0.0")
-        print("Author: MLOps Team")
         print("=" * 70 + "\n")
 
         # 1. Validar entorno
