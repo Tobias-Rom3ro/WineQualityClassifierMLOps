@@ -124,7 +124,7 @@ def main():
     try:
         # Banner de inicio
         print("\n" + "=" * 70)
-        print("🍷 WINE QUALITY PREDICTOR - MLOps Project")
+        print("WINE QUALITY PREDICTOR - MLOps Project")
         print("=" * 70)
         print("Version: 1.0.0")
         print("=" * 70 + "\n")
@@ -148,9 +148,9 @@ def main():
         logger.info(f"   Debug mode: {app_config.debug}")
 
         print("\n" + "=" * 70)
-        print("✅ Application ready!")
+        print("Application ready!")
         print("=" * 70)
-        print(f"📍 Access the app at: http://localhost:{app_config.server_port}")
+        print(f"Access the app at: http://localhost:{app_config.server_port}")
         print("=" * 70 + "\n")
 
         app.launch(

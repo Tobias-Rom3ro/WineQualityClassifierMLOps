@@ -86,7 +86,7 @@ class OpenAIProvider:
             self.temperature = config.get("temperature", 0.7)
             self.max_tokens = config.get("max_tokens", 1024)
 
-            logger.info(f"✅ OpenAI provider initialized: {model_name}")
+            logger.info(f"OpenAI provider initialized: {model_name}")
 
         except ImportError:
             raise ImportError(
@@ -137,7 +137,7 @@ class OllamaProvider:
             response = self.session.get(f"{self.host}/api/tags")
             response.raise_for_status()
 
-            logger.info(f"✅ Ollama provider initialized: {model_name}")
+            logger.info(f"Ollama provider initialized: {model_name}")
 
         except ImportError:
             raise ImportError("requests not installed. Install it with: pip install requests")
@@ -283,5 +283,5 @@ class GenAIClient:
             logger.info(f"Connection test successful: {response[:50]}")
             return True
         except Exception as e:
-            logger.error(f"❌ Connection test failed: {e}")
+            logger.error(f"Connection test failed: {e}")
             return False
